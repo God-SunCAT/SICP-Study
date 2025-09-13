@@ -1,0 +1,11 @@
+(define (sum_of_square x y)
+	(+ (* x x) (* y y))
+  )
+
+(define (sum_of_two_squares x y z)
+	(cond ((and (>= x z) (>= y z)) (sum_of_square x y))
+	      ((and (>= x y) (>= z y)) (sum_of_square x z))
+	      ((and (>= y x) (>= z x)) (sum_of_square y z))
+	)
+  )
+(display (sum_of_two_squares 3 2 1))
